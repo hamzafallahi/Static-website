@@ -1,0 +1,245 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>User page</title>
+      <link rel="stylesheet" href="CSS/user.css" />
+      <script src="/JS/script.js"></script>
+      <script src="https://kit.fontawesome.com/05d5d32f0e.js" crossorigin="anonymous"></script>
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve   from localStorage
+    const savedUsername = localStorage.getItem('savedUsername');
+    const savedUseremail = localStorage.getItem('savedUseremail');
+    const savedUserpass = localStorage.getItem('savedUserpass');
+
+    // Display   on the user page
+    const displayUsername = document.getElementById('displayUsername');
+    displayUsername.innerHTML = savedUsername|| 'No username available';
+
+    const displayUseremail = document.getElementById('emailText');
+    displayUseremail.innerHTML = "\"" + savedUseremail + "\"" || 'example@xyz.com';
+
+    const displayUserpass = document.getElementById('passwordText');
+    displayUserpass.innerHTML = "\"" + savedUserpass + "\"" || '***********';
+  
+
+
+});
+
+
+      </script>
+    </head>
+    <body id="start">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="Index.html" >
+              <img src=".\image\Plan de travail 1.png" alt="" width="200">
+
+            </a></li>
+            <li><a href="Index.html" >
+              <i class="fas fa-home"></i>
+              <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="user.html">
+              <i class="fas fa-user"></i>
+              <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="Index.html#first" >
+              <i class="fas fa-chart-bar"></i>
+              <span class="nav-item">Dashbord</span>
+            </a></li>
+            <li><a href="Index.html#stat">
+              <i class="fas fa-tasks"></i>
+              <span class="nav-item">BestOF</span>
+            </a></li>
+  
+            <li><a href="Index.html#us">
+              <i class="fas fa-question-circle"></i>
+              <span class="nav-item">About</span>
+            </a></li>
+            <!--<li><a href="user.html#start">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMZJREFUSEvtlNENwjAMRK+bwCawCUwCTAKbwCawCehQkYhl+xxE/uqfqmp7L72XdsLgmQbnoxdwBbACsK4urAfA8M0cfAGwr0CqgAOAownk+UlBKgCumqu385jf4pZBFIB935MAQrYAeHRHAb57jzIYHkrPAJXwDzSUHgE8qcqnK90DRFIVwJVuAUpqBdJIt4Ce3iMYty0h77GAX7q3oEa42qZ8+Cl6STMWgOexaXSp6C8VnQHsgq3afFTePRUH6veQXh8OeAEnUCQZXQ8KzQAAAABJRU5ErkJggg=="/>
+              <span class="nav-item">Up</span>
+            </a></li>-->
+
+          </ul>
+        </nav>
+    
+        <section class="main">
+          <div class="main-top">
+            <h1>User Profile</h1>
+      
+          </div>
+          <div class="main-user">
+ 
+              <div class="card1">
+                  <h3>Username</h3>
+                  <div class="user-info">
+                      <img src="profile.png" alt="" width="150" height="140">
+                      <p id="displayUsername"></p>
+                  </div>
+              </div>
+              <div class="card">
+                <h3>Email</h3>
+                <p>Your email</p>
+                <p id="emailText" style="font-size: 18px;"></p>
+              </div>
+              <div class="card">
+                <h3>Password</h3>
+                <p>Your password</p>
+                <p id="passwordText" style="font-size: 18px;"></p>
+              </div>
+
+          </div>
+    
+          <section class="main-getstarted">
+            <h1>Get Started</h1>
+            <div class="getstarted-box">
+ 
+              <div class="course">
+                <div class="box">
+                  <h3>Trade</h3>
+                  <p style="font-size: 16px;">0 trades Done</p>
+                  
+                  <img src=".\image\trade.png" alt="" width="200" height="200">
+                  
+                  
+                </div>
+                <div class="box">
+                  <h3>Balance</h3>
+                  <p style="font-size: 16px;">$0.00 -+ 0.0BTC</p>
+                  
+                  <img src=".\image\balance.png" alt="" width="200" height="200">
+                  
+                </div>
+                <div class="box">
+                  <h3>Deposit</h3>
+                  <p>404</p>
+                  
+                  <img src=".\image\deposite.png" alt="" width="200" height="200">
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="table" id="first">
+            <article>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="left"><span>Name</span></td>
+                            <td><span>Price</span></td>
+                            <td><span>Change</span></td>
+                            <td><span>Volume</span></td>
+                            <td><span class="args">Market Cap</span></td>
+                        </tr>
+    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="left"><img src="./image/coins/ADA.png" alt="" srcset=""></td>
+                            <td><span>$0.6078</span></td>
+                            <td><span class="green">+0.78%</span></td>
+                            <td><span>$709.03M</span></td>
+                            <td><span>$21.52B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/AVAX.png" alt="" srcset=""></td>
+                            <td><span>$45.36</span></td>
+                            <td><span class="green">+5.19%</span></td>
+                            <td><span>$1.46B</span></td>
+                            <td><span>$16.58$</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/bitcoin.png" alt=""></td>
+                            <td><span>$44,114.36</span></td>
+                            <td><span class="green">+0.70%</span></td>
+                            <td><span>$23.18B</span></td>
+                            <td><span>$863.47B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/BNB.png" alt=""></td>
+                            <td><span>$272.30</span></td>
+                            <td><span class="green">+5.22%</span></td>
+                            <td><span>$868.62M</span></td>
+                            <td><span>$41.30B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/DODG.png" alt=""></td>
+                            <td><span>$0.09247</span></td>
+                            <td><span class="green">+0.18%</span></td>
+                            <td><span>$674.58</span></td>
+                            <td><span>$13.15B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/DOT.png" alt="" srcset=""></td>
+                            <td><span>$7.66</span></td>
+                            <td><span class="red">-8.06%</span></td>
+                            <td><span>$313.75M</span></td>
+                            <td><span>$6.05B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/ETH.png" alt=""></td>
+                            <td><span>$2,248.71</span></td>
+                            <td><span class="green">+0.17%</span></td>
+                            <td><span>$9.97B</span></td>
+                            <td><span>$270.29B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/LINK.png" alt="" srcset=""></td>
+                            <td><span>$14.74</span></td>
+                            <td><span class="red">-0.06%</span></td>
+                            <td><span>$594.42M</span></td>
+                            <td><span>$8.37B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/MATIC.png" alt="" srcset=""></td>
+                            <td><span>$88</span></td>
+                            <td><span class="red">-2.4%</span></td>
+                            <td><span>$320M</span></td>
+                            <td><span>$10B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/SQL.png" alt="" srcset=""></td>
+                            <td><span>$72</span></td>
+                            <td><span class="green">+1.2%</span></td>
+                            <td><span>$380M</span></td>
+                            <td><span>$5B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/TRX.png" alt=""></td>
+                            <td><span>$5.20</span></td>
+                             <td><span class="red">-1.9%</span></td>
+                             <td><span>$300M</span></td>
+                             <td><span>$3B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/UDT.png" alt=""></td>
+                            <td><span>$26</span></td>
+                            <td><span class="green">+2.0%</span></td>
+                            <td><span>$420M</span></td>
+                            <td><span>$3B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><img src="./image/coins/USDC.png" alt=""></td>
+                            <td><span>$1.00</span></td>
+                            <td><span class="red">-0.01%</span></td>
+                            <td><span>$78B</span></td>
+                            <td><span>$78B</span></td>
+                        </tr>
+                       
+                        
+     
+    
+                       
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        </section>
+      </div>
+
+    </body>
+    </html></span>
